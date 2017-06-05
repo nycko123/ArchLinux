@@ -1,2 +1,2 @@
 # ArchLinux
-PKBUILDS against outdated AUR
+updated PKBUILDS of outdated AURs
