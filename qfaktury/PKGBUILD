@@ -1,0 +1,43 @@
+# Maintainer: Piotr Gorski <lucjan.lucjanov@gmail.com>
+# Maintainer: Jagoda Gorska <juliagoda.dev@gmail.com>
+
+pkgname=qfaktury-qt5-git
+_gitname=qfaktury 
+pkgver=0.7.1.138.gcdc6076 
+pkgrel=1
+pkgdesc="Program fakturujący w Qt5" 
+url="https://github.com/juliagoda/qfaktury" 
+depends=('qt5-webengine' 'qt5-base' 'quazip') 
+makedepends=('git' 'cmake' 'extra-cmake-modules') 
+arch=('x86_64') 
+license=('GPL') 
+conflicts=('qfaktury') 
+provides=('qfaktury') 
+source=("git+https://github.com/juliagoda/qfaktury") 
+md5sums=('SKIP') 
+
+pkgver() {
+       cd ${_gitname}
+       # git tags
+       git describe --tags --long | sed 's/^v//;s/-/./g'
+       # cmakelist version
+       # _ver="$(cat CMakeLists.txt | grep -m3 -e _VERSION_MAJOR -e _VERSION_MINOR -e _VERSION_MICRO | grep -o "[[:digit:]]*" | paste -sd'.')"
+       # echo "${_ver}.r$(git rev-list --count HEAD).g$(git rev-parse --short HEAD)"
+              }
+
+	      prepare() {
+	        mkdir -p build
+	}
+
+	build() {
+	  cd build
+    cmake ../${_gitname} \
+        -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/usr 
+  make
+}
+
+package() {
+  cd build
+  make DESTDIR="${pkgdir}" install
+}
