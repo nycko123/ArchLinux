@@ -1,0 +1,13 @@
+[Unit]
+ Description=Automatic Updates Finder (checkupdates)
+ After=network-online.target
+
+[Service]
+ Type=simple
+ ExecStart=/usr/bin/sh -c '/usr/bin/checkupdates | wc -l > /tmp/checkupdates'
+ TimeoutStopSec=60
+ KillMode=process
+ KillSignal=SIGINT
+
+[Install]
+ WantedBy=default.target

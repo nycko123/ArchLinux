@@ -1,0 +1,33 @@
+# Maintainer: nycko123 <nycko123 at gmail com> (split PKGBUILD template)
+pkgbase=user-PKGBUILDs
+pkgname=(user-package1 user-package2)
+pkgver=1.0
+pkgrel=1
+
+pkgdesc='description'
+arch=('any')
+url='https://github.com/nycko123'
+license=('custom')
+depends=('package')
+
+source=('file1'
+	'file2')
+
+sha256sums=('SKIP'
+            'SKIP')
+
+package_user-package1() {
+	pkgdesc='description1'
+	
+	install -Dm0644 file1 "$pkgdir"/some/path/file1
+}
+
+package_user-package2() {
+	pkgdest='description2'
+
+	install -Dm0644 file2 "$pkgdir"/some/path/file2
+}
+
+#post_install() {
+#	some instructions
+#}

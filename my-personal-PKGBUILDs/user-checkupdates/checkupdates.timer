@@ -1,0 +1,10 @@
+[Unit]
+ Description=Automatic Update Finder (checkupdates): 2 minutes after boot then every 15 minutes
+
+[Timer]
+ OnBootSec=2min
+ OnUnitActiveSec=15min
+ Unit=checkupdates.service
+
+[Install]
+ WantedBy=default.target

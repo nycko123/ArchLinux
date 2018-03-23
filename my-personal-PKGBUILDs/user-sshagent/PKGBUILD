@@ -1,0 +1,26 @@
+# Maintainer: nycko123 <nycko123 at gmail com>
+pkgbase=user-PKGBUILDs
+pkgname=user-sshagent
+pkgver=1.0
+pkgrel=1
+
+pkgdesc='Base of personal PKGBUILDs of different programs/services'
+arch=('any')
+url='https://github.com/nycko123'
+license=('custom')
+depends=('systemd')
+
+source=('ssh-agent.service')
+
+sha256sums=('5e0894cba91047f1d78ef90e46393e1f7273a8ea37f174999b59628b62901845')
+
+package_user-sshagent() {
+	pkgdesc='--user SSH-Agent'
+
+	install -Dm0644 ssh-agent.service "$pkgdir"/usr/lib/systemd/user/ssh-agent.service
+}
+
+post_install() {
+	systemctl --user daemon-reload
+	systemctl --user enable --now ssh-agent.service
+}
