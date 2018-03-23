@@ -1,6 +1,6 @@
-# user-checkupdates
+# checkupdates-userservice
 
-### systemctl --user service file to find system updates using pacman's 'checkupdate'
+### systemctl --user service to automatically find system updates using pacman's 'checkupdate'
 ```
 - checkupdates.service - fetches number of available updates and pipes it to '/tmp/checkupdates' file
 - checkupdates.timer - runs checkupdates.service on a schedule

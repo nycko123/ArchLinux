@@ -1,4 +1,0 @@
-post_install() {
-	systemctl --user daemon-reload
-	systemctl --user enable --now user-sshagent.service
-}

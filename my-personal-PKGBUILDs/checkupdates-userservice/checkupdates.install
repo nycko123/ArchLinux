@@ -1,0 +1,5 @@
+post_install() {
+	echo "****************************************************************************************"
+	echo "Run 'systemctl --user enable --now checkupdates.timer' to autostart this service on boot"
+	echo "****************************************************************************************"
+}

@@ -1,18 +1,18 @@
 # Maintainer: nycko123 <nycko123 at gmail com>
-pkgname=user-checkupdates
+pkgname=checkupdates-userservice
 pkgver=1.0
 pkgrel=1
 
-pkgdesc='--user Updates Finder (checkupdates)'
+pkgdesc='Updates Finder (checkupdates)'
 arch=('any')
 url='https://github.com/nycko123/ArchLinux'
 license=('custom')
 depends=('systemd')
-install=$pkgname.install
+install='checkupdates.install'
 
-source=("$pkgname.service"
-	"$pkgname.timer"
-	"$pkgname.hook")
+source=('checkupdates.service'
+	'checkupdates.timer'
+	'checkupdates.hook')
 
 sha256sums=('560293ab5de5c0311d041dc984af8a1d9f0930a9a986b8ee8fdd01dce35b9540'
             '18afcd9d469892c38e95d04d5e5665603d6e7ebefb9daa4820422c1f431edda2'
@@ -20,11 +20,11 @@ sha256sums=('560293ab5de5c0311d041dc984af8a1d9f0930a9a986b8ee8fdd01dce35b9540'
 
 package() {
 	# runs pacman's `checkupdate | wc -l > /tmp/checkupdates`
-	install -Dm0644 $pkgname.service "$pkgdir"/usr/lib/systemd/user/$pkgname.service
+	install -Dm0644 "$srcdir/checkupdates.service"  "$pkgdir/usr/lib/systemd/user/checkupdates.service"
 
 	# runs timer on checkupdates.service
-	install -Dm0644 $pkgname.timer "$pkgdir"/usr/lib/systemd/user/$pkgname.timer
+	install -Dm0644 "$srcdir/checkupdates.timer" "$pkgdir/usr/lib/systemd/user/checkupdates.timer"
 
 	# resets /tmp/checkupdates after every `pacman -Syu` (if run between timers)
-	install -Dm0644 $pkgname.hook "$pkgdir"/etc/pacman.d/hooks/$pkgname.hook
+	install -Dm0644 "$srcdir/checkupdates.hook" "$pkgdir/etc/pacman.d/hooks/checkupdates.hook"
 }
