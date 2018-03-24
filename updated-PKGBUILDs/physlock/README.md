@@ -1,4 +1,5 @@
-# ArchLinux physlock - lightweight linux console locking tool (tty and Xserver)
+# ArchLinux physlock
+### lightweight linux console locking tool (tty and Xserver)
 version 11
 
 	-d	fork and detach, parent returns after everything is set up

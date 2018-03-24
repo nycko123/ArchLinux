@@ -1,4 +1,5 @@
-# ArchLinux Micro terminal-based text editor
+# ArchLinux micro-bin
+### terminal-based text editor
 
 latest 1.4.0 PKGBUILD
 
