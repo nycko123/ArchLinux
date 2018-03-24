@@ -15,7 +15,7 @@ source=('checkupdates.service'
 	'checkupdates.hook')
 
 sha256sums=('560293ab5de5c0311d041dc984af8a1d9f0930a9a986b8ee8fdd01dce35b9540'
-            '18afcd9d469892c38e95d04d5e5665603d6e7ebefb9daa4820422c1f431edda2'
+            '4179d0f281097763476323f4766dbd49c3898b2d9f883432e6b4da1dd7b50f0f'
             'ee9e48e9a3908f6c908251d8020c988120a2b8b99aa1e036b9ceeffbc265e428')
 
 package() {
