@@ -9,6 +9,5 @@
 *.log.*
 *.sig
 
-pkg/
-src/
-dnscrypt-proxy/
+*pkg/
+*src/
