@@ -8,9 +8,8 @@ arch=('any')
 url='https://github.com/nycko123/ArchLinux'
 license=('custom')
 depends=('systemd')
-install='sshagent.install'
 
-source=('sshagent.service')
+source=('https://github.com/nycko123/ArchLinux/raw/master/my-personal-PKGBUILDs/'$pkgname'/sshagent.service')
 
 sha256sums=('5e0894cba91047f1d78ef90e46393e1f7273a8ea37f174999b59628b62901845')
 

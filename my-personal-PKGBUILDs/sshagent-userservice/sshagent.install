@@ -1,5 +1,0 @@
-post_install() {
-	echo "**************************************************************************************"
-	echo "Run 'systemctl --user enable --now sshagent.service' to autostart this service on boot"
-	echo "**************************************************************************************"
-}
