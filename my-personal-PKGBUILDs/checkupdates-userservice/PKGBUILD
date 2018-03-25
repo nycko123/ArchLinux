@@ -5,10 +5,9 @@ pkgrel=1
 
 pkgdesc='Updates Finder (checkupdates)'
 arch=('any')
-url='https://github.com/nycko123/ArchLinux'
+url='https://github.com/nycko123/ArchLinux/tree/master/my-personal-PKGBUILDs/checkupdates-userservice/checkupdate-userservice.src.tar.gz'
 license=('custom')
 depends=('systemd')
-install='checkupdates.install'
 
 source=('checkupdates.service'
 	'checkupdates.timer'
