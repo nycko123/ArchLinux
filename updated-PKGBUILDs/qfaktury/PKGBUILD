@@ -3,7 +3,7 @@
 
 pkgname=qfaktury-qt5-git
 _gitname=qfaktury 
-pkgver=0.7.1.138.gcdc6076 
+pkgver=0.7.2.13.g44fcecd
 pkgrel=1
 pkgdesc="Program fakturujący w Qt5" 
 url="https://github.com/juliagoda/qfaktury" 
