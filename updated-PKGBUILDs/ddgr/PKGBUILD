@@ -10,7 +10,7 @@ license=('GPL3')
 depends=('python')
 conflicts=('ddgr-git')
 source=("https://github.com/jarun/ddgr/archive/v$pkgver.tar.gz")
-md5sums=('4169e233953df63931e441c06d0ebe25')
+md5sums=('SKIP')
 
 package() {
   cd "$srcdir/$pkgname-$pkgver"
