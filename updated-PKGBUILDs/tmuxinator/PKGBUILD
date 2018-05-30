@@ -7,11 +7,11 @@ pkgdesc="Manage complex tmux sessions easily"
 arch=(any)
 url="https://github.com/aziz/tmuxinator"
 license=(MIT)
-depends=('ruby' 'ruby-rdoc' 'ruby-erubis' 'ruby-thor' 'ruby-xdg')
+depends=(ruby ruby-erubis ruby-thor ruby-xdg ruby-rdoc)
 makedepends=(rubygems)
 source=(http://rubygems.org/downloads/tmuxinator-$pkgver.gem)
 noextract=(tmuxinator-$pkgver.gem)
-md5sums=('SKIP')
+md5sums=('bec5e560844ba409c72f9978d91258db')
 
 package() {
     cd $srcdir
