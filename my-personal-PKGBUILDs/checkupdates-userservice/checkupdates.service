@@ -3,8 +3,9 @@
  After=network-online.target
 
 [Service]
- Type=simple
- ExecStart=/usr/bin/sh -c '/usr/bin/checkupdates | wc -l > /tmp/checkupdates'
+ Type=oneshot
+# ExecStart=/usr/bin/sh -c '/usr/bin/trickle -s -d 250 /usr/bin/checkupdates | wc -l > /tmp/checkupdates'
+ ExecStart=/usr/bin/sh -c '/usr/bin/checkupdates > /tmp/checkupdates'
  TimeoutStopSec=60
  KillMode=process
  KillSignal=SIGINT
