@@ -7,7 +7,7 @@ pkgdesc='SSH-Agent userservice'
 arch=('any')
 url='https://github.com/nycko123/ArchLinux'
 license=('custom')
-depends=('systemd')
+#depends=('systemd')
 
 source=('https://github.com/nycko123/ArchLinux/raw/master/my-personal-PKGBUILDs/'$pkgname'/sshagent.service')
 

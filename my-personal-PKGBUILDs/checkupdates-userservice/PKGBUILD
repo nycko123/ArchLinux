@@ -7,7 +7,7 @@ pkgdesc='Updates Finder (checkupdates)'
 arch=('any')
 url='https://github.com/nycko123/ArchLinux'
 license=('custom')
-depends=('systemd')
+depends=('pacman-contrib')
 
 source=('https://github.com/nycko123/ArchLinux/raw/master/my-personal-PKGBUILDs/'$pkgname'/checkupdates.src.tar.gz')
 
