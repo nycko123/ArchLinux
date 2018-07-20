@@ -1,7 +1,7 @@
 # Maintainer: nycko123 <nycko123 at gmail com>
 pkgname=checkupdates-userservice
 pkgver=1.0
-pkgrel=2
+pkgrel=3
 
 pkgdesc='Updates Finder (checkupdates)'
 arch=('any')
