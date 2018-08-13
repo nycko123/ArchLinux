@@ -17,7 +17,7 @@ optdepends=("asp: to download PKGBUILD's of official packages"
             "cower: to manage AUR packages")
 conflicts=('pak')
  
-source=("${pkgname}::git+http://gitlab.com/nycko123/pak.git#branch=develop")
+source=("${pkgname}::git+https://gitlab.com/nycko123/pak.git#branch=develop")
  
 sha256sums=('SKIP')
 
