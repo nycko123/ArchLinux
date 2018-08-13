@@ -4,7 +4,7 @@
 # You had to install all optdepends for functionality of this script
  
 pkgname=pak-git
-pkgver=1.5.2.r11.g5f97254
+pkgver=1.5.2.r11.gf1d0fe2
 pkgrel=1
 pkgdesc="Simple pacman and AUR frontend"
 arch=('any')
