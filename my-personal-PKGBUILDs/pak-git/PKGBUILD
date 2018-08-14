@@ -1,7 +1,7 @@
 # Maintainer: nycko123 <nycko123 at gmail dot com>
 # Contributor: pavbaranov <pavbaranov at gmail dot com>
 
-# You had to install all optdepends for functionality of this script
+# You had to install all optdepends for full functionality of this script
  
 pkgname=pak-git
 pkgver=1.5.2.r11.gf1d0fe2
