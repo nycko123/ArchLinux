@@ -4,17 +4,17 @@
 # You had to install all optdepends for full functionality of this script
  
 pkgname=pak-git
-pkgver=1.6.r1.gf5064fd
+pkgver=1.7.r32.gfccf815
 pkgrel=1
 pkgdesc="Simple pacman and AUR frontend"
 arch=('any')
 url="https://gitlab.com/nycko123/pak"
 license=('GPL')
-depends=('bash')
-makedepends=('git')
+depends=('bash' 'git' 'jq')
 optdepends=("asp: to download PKGBUILD's of official packages"
             "cower: to manage AUR packages"
-			"namcap: to validate built packages")
+	    "namcap: to validate built packages")
+backup=('etc/xdg/pak.conf')
 conflicts=(pak)
  
 source=("git+https://gitlab.com/nycko123/pak.git")
@@ -30,4 +30,6 @@ package(){
  install -Dm755 "$srcdir/${pkgname%-*}/${pkgname%-*}" "$pkgdir/usr/bin/${pkgname%-*}"
  install -Dm644 "$srcdir/${pkgname%-*}/pak.conf" "$pkgdir/etc/xdg/pak.conf"
  install -Dm644 "$srcdir/${pkgname%-*}/locale/pl.mo" "$pkgdir/usr/share/locale/pl/LC_MESSAGES/pak.mo"
+ install -Dm644 "$srcdir/${pkgname%-*}/man/pak.8.gz" "$pkgdir/usr/share/man/man8/pak.8.gz"
+ install -Dm644 "$srcdir/${pkgname%-*}/man/pak.conf.5.gz" "$pkgdir/usr/share/man/man5/pak.conf.5.gz"
 }
