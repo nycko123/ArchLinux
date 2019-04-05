@@ -1,4 +1,5 @@
-*.tar.*
+*.gitignore
+*.tar.xz
 *.jar
 *.exe
 *.msi
