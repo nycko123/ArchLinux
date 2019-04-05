@@ -9,9 +9,9 @@ url='https://github.com/nycko123/ArchLinux'
 license=('GPL')
 depends=('pacman-contrib')
 
-source=("https://github.com/nycko123/ArchLinux/raw/master/my-personal-PKGBUILDs/${pkgname}/${pkgname}-${pkgver}-${pkgrel}.src.tar.gz")
+source=("https://github.com/nycko123/ArchLinux/raw/master/my-personal-PKGBUILDs/${pkgname}/${pkgname}-${pkgver}-${pkgrel}.tar.gz")
 
-sha256sums=('7205d9649cdc450c58a21fd5a7c0813853298b84e0b20595c70e017d42663d0f')
+sha256sums=('650a66c46a039d9dca5da9e302d71488c89c6014e1c3137fb8b98ebc9aec8c84')
 
 package() {
 	# runs pacman's `checkupdate | wc -l > /tmp/checkupdates`
