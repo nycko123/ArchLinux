@@ -1,7 +1,7 @@
 # Maintainer: nycko123 <nycko123 at gmail com>
 pkgname=checkupdates-userservice
-pkgver=1.0
-pkgrel=3
+pkgver=1.1
+pkgrel=1
 
 pkgdesc='Updates Finder (checkupdates)'
 arch=('any')
@@ -9,7 +9,7 @@ url='https://github.com/nycko123/ArchLinux'
 license=('GPL')
 depends=('pacman-contrib')
 
-source=('https://github.com/nycko123/ArchLinux/raw/master/my-personal-PKGBUILDs/'$pkgname'/checkupdates.src.tar.gz')
+source=("https://github.com/nycko123/ArchLinux/raw/master/my-personal-PKGBUILDs/${pkgname}/${pkgname}-${pkgver}-${pkgrel}.src.tar.gz")
 
 sha256sums=('7205d9649cdc450c58a21fd5a7c0813853298b84e0b20595c70e017d42663d0f')
 

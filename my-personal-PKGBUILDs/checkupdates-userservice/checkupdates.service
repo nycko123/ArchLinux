@@ -1,6 +1,6 @@
 [Unit]
- Description=Automatic Updates Finder (checkupdates)
- After=network-online.target
+ Description=Automatic Updates Checker (checkupdates)
+# After=network-online.target
 
 [Service]
  Type=oneshot

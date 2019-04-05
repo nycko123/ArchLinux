@@ -1,5 +1,5 @@
 [Unit]
- Description=Automatic Updates Finder (checkupdates): 30 seconds after boot then every 30 minutes
+ Description=Automatic Updates Checker (checkupdates): 30 seconds after boot then every 30 minutes
 
 [Timer]
  OnBootSec=30s

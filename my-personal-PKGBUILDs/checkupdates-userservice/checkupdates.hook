@@ -4,6 +4,7 @@ Type = Package
 Target = *
 
 [Action]
-Description = Resetting /tmp/checkupdates file after an update
+Description = Resetting /tmp/checkupdates file after the upgrade
 When = PostTransaction
-Exec = /usr/bin/sh -c 'echo -n > /tmp/checkupdates > /dev/null'
+#Exec = /usr/bin/sh -c 'echo -n > /tmp/checkupdates > /dev/null'
+Exec = /usr/bin/sh -c 'if [ -e /tmp/checkupdates ]; then rm /tmp/checkupdates; fi &> /dev/null'
